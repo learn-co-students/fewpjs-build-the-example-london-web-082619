@@ -2,7 +2,31 @@
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
+
 // Your JavaScript code goes here!
+const hearts = [...document.getElementsByClassName('like')]
+const modal = document.getElementById('modal')
+hearts.forEach( heart => heart.addEventListener('click', toggleLike))
+
+function toggleLike(e) {
+  let heart = e.target;
+  mimicServerCall()
+  .then(resp => {
+    if (resp == "Pretend remote server notified of action!") {
+      modal.className = "hidden";
+      heart.className = "activated-heart"
+      console.log("no errors here");
+
+    }
+  })
+
+    .catch(error => {
+    modal.className = null
+    modal.innerHTML = `<h1>ERROR</h1><br>${error}`
+    })
+}
+
+
 
 
 
