@@ -45,7 +45,7 @@ Here's the specification:
       * Add the `.activated-heart` class to make the heart appear red
 * When a user clicks on a full heart
   * Change the heart back to an empty heart
-  * Remove the `.activated-heart` class
+  <!-- * Remove the `.activated-heart` class -->
 * Keep all your styling rules entirely in `style.css`. Do not manipulate any `.style` properties.
 
 Only manipulate the DOM once the server requests respond. Do not make the
