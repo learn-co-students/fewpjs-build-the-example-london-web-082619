@@ -5,6 +5,7 @@ body {
 
 .like {
   cursor: pointer;
+  width: fit-content;
 }
 
 body h1 {
